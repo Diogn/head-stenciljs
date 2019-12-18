@@ -25,9 +25,12 @@ export namespace Components {
     'middle': string;
   }
   interface MyHeader {
+    'fbicon': string;
+    'homeUrl': string;
     'icon': string;
     'label': string;
     'title': string;
+    'twiticon': string;
     'width': string;
   }
 }
@@ -68,10 +71,13 @@ declare namespace LocalJSX {
     'middle'?: string;
   }
   interface MyHeader {
+    'fbicon'?: string;
+    'homeUrl'?: string;
     'icon'?: string;
     'label'?: string;
     'onOnToggle'?: (event: CustomEvent<any>) => void;
     'title'?: string;
+    'twiticon'?: string;
     'width'?: string;
   }
 

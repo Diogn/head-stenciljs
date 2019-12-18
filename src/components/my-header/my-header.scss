@@ -1,3 +1,11 @@
+
+*, :after, :before {
+    border: 0 solid #ccc;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+
 html {
     box-sizing: border-box;
     font-family: sans-serif;
@@ -7,11 +15,13 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-*, :after, :before {
-    border: 0 solid #ccc;
-}
-*, :after, :before {
-    box-sizing: inherit;
+
+body {
+    margin: 0;
+    display: block;
+    position: relative;
+    line-height: 1.5;
+    font-family: PT Sans,sans-serif;
 }
 
 .tracking-wide {
@@ -20,18 +30,28 @@ html {
 .text-sm {
     font-size: .875rem;
 }
-
-.text-black {
-    color: #000;
+.absolute {
+    position: absolute;
 }
-.font-chronicle-display {
-    font-family: Chronicle Display,serif;
+.flex-row, .flex-row-reverse {
+    -webkit-box-orient: horizontal;
 }
 
+.flex-row {
+    -webkit-box-direction: normal;
+    flex-direction: row;
+}
+
+// Margin && Spacing 
+.w-full {
+    width: 100%;
+}
 .w-6 {
     width: 1.5rem;
 }
-
+.ml-auto {
+    margin-left: auto;
+}
 .ml-4 {
     margin-left: 1rem;
 }
@@ -46,6 +66,28 @@ html {
 }
 .h-6 {
     height: 1.5rem;
+}
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.pr-5 {
+    padding-right: 1.5rem;
+}
+//
+
+.bg-black {
+    background-color: #000;
+}
+.text-white {
+    color: #fff;
+}
+.text-black {
+    color: #000;
+}
+.font-chronicle-display {
+    font-family: Chronicle Display,serif;
 }
 .flex {
     display: flex;
@@ -75,9 +117,7 @@ a {
     line-height: 1.5;
 }
 
-.w-full {
-    width: 100%;
-}
+
 .block {
     display: block;
 }
@@ -99,9 +139,6 @@ img {
 .z-50 {
     z-index: 50;
 }
-.w-full {
-    width: 100%;
-}
 .shadow-md {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,.12), 0 2px 4px 0 rgba(0,0,0,.08);
 }
@@ -120,7 +157,13 @@ img {
 .bg-white {
     background-color: #fff;
 }
-
 .items-center {
     align-items: center;
+}
+.facebook-wrapper {
+    margin-right: .25rem
+}
+
+.rounded-sm {
+    border-radius: .125rem;
 }
