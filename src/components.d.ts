@@ -29,6 +29,7 @@ export namespace Components {
     'homeUrl': string;
     'icon': string;
     'label': string;
+    'open': boolean;
     'title': string;
     'twiticon': string;
     'width': string;
@@ -75,7 +76,9 @@ declare namespace LocalJSX {
     'homeUrl'?: string;
     'icon'?: string;
     'label'?: string;
+    'onActive'?: (event: CustomEvent<any>) => void;
     'onOnToggle'?: (event: CustomEvent<any>) => void;
+    'open'?: boolean;
     'title'?: string;
     'twiticon'?: string;
     'width'?: string;
