@@ -10,27 +10,13 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
   interface MyHeader {
     'fbicon': string;
     'homeUrl': string;
     'icon': string;
     'label': string;
     'open': boolean;
-    'title': string;
+    'thetitle': string;
     'twiticon': string;
     'width': string;
   }
@@ -39,38 +25,17 @@ export namespace Components {
 declare global {
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
   interface HTMLMyHeaderElement extends Components.MyHeader, HTMLStencilElement {}
   var HTMLMyHeaderElement: {
     prototype: HTMLMyHeaderElement;
     new (): HTMLMyHeaderElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
     'my-header': HTMLMyHeaderElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
   interface MyHeader {
     'fbicon'?: string;
     'homeUrl'?: string;
@@ -79,13 +44,12 @@ declare namespace LocalJSX {
     'onActive'?: (event: CustomEvent<any>) => void;
     'onOnToggle'?: (event: CustomEvent<any>) => void;
     'open'?: boolean;
-    'title'?: string;
+    'thetitle'?: string;
     'twiticon'?: string;
     'width'?: string;
   }
 
   interface IntrinsicElements {
-    'my-component': MyComponent;
     'my-header': MyHeader;
   }
 }
@@ -96,7 +60,6 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
-      'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
       'my-header': LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
     }
   }

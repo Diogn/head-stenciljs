@@ -15,7 +15,7 @@ export class MyHeader {
     @Prop() label: string;
     @Prop() icon: string;
     @Prop() width: string;
-    @Prop() title: string;
+    @Prop() thetitle: string;
     @Prop() fbicon: string;
     @Prop() twiticon: string;
     @Prop() open: boolean;
@@ -23,14 +23,6 @@ export class MyHeader {
     handleClick() {
         this.open = !this.open;
     }
-    // @Listen('click', { capture: true })
-    // handleClick(ev) {
-    //     console.log('CLICKED!');
-    // }
-    
-    // checkboxCompleteHandler(checkbox: Checkbox) {
-    //     this.active.emit(checkbox);
-    // }
 
     toggleComponent() {
         this.toggle = !this.toggle;
@@ -41,12 +33,12 @@ export class MyHeader {
 
         return (
             <header class="bg-black flex flex-row pin-t pin-l w-full px-4 z-50 absolute">
-                <stencil-route-link url={this.homeUrl} class="flex mb-2 mt-2 mr-4 h-6 w-6">
+                <stencil-route-link url='/' class="flex mb-2 mt-2 mr-4 h-6 w-6">
                     <img class="block w-full" src={getAssetPath(`./assets/${this.icon}`)} alt="Kompas Icon"/>
                 </stencil-route-link>
                 <div class="border-l border-solid border-white flex mb-2 mt-2"></div>
                 <div class="flex items-center ml-4 min-w-0 text-white">
-                    <span class="block font-chronicle-display text-sm text-white tracking-wide whitespace-no-wrap overflow-hidden">{this.title}</span>
+                    <span class="block font-chronicle-display text-sm text-white tracking-wide whitespace-no-wrap overflow-hidden">{this.thetitle}</span>
                 </div>
                 <div class="flex ml-auto">
                     <div class="flex ml-4 pr-5">
