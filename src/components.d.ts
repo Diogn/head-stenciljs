@@ -14,11 +14,8 @@ export namespace Components {
     'fbIcon': string;
     'homeIcon': string;
     'homeUrl': string;
-    'label': string;
-    'open': boolean;
-    'thetitle': string;
+    'theTitle': string;
     'twitIcon': string;
-    'width': string;
   }
 }
 
@@ -40,13 +37,8 @@ declare namespace LocalJSX {
     'fbIcon'?: string;
     'homeIcon'?: string;
     'homeUrl'?: string;
-    'label'?: string;
-    'onActive'?: (event: CustomEvent<any>) => void;
-    'onOnToggle'?: (event: CustomEvent<any>) => void;
-    'open'?: boolean;
-    'thetitle'?: string;
+    'theTitle'?: string;
     'twitIcon'?: string;
-    'width'?: string;
   }
 
   interface IntrinsicElements {
