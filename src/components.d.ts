@@ -11,13 +11,13 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface MyHeader {
-    'fbicon': string;
+    'fbIcon': string;
+    'homeIcon': string;
     'homeUrl': string;
-    'icon': string;
     'label': string;
     'open': boolean;
     'thetitle': string;
-    'twiticon': string;
+    'twitIcon': string;
     'width': string;
   }
 }
@@ -37,15 +37,15 @@ declare global {
 
 declare namespace LocalJSX {
   interface MyHeader {
-    'fbicon'?: string;
+    'fbIcon'?: string;
+    'homeIcon'?: string;
     'homeUrl'?: string;
-    'icon'?: string;
     'label'?: string;
     'onActive'?: (event: CustomEvent<any>) => void;
     'onOnToggle'?: (event: CustomEvent<any>) => void;
     'open'?: boolean;
     'thetitle'?: string;
-    'twiticon'?: string;
+    'twitIcon'?: string;
     'width'?: string;
   }
 
