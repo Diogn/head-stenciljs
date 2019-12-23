@@ -7,16 +7,16 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type      | Default     |
-| ---------- | ---------- | ----------- | --------- | ----------- |
-| `fbicon`   | `fbicon`   |             | `string`  | `undefined` |
-| `homeUrl`  | `home-url` |             | `string`  | `undefined` |
-| `icon`     | `icon`     |             | `string`  | `undefined` |
-| `label`    | `label`    |             | `string`  | `undefined` |
-| `open`     | `open`     |             | `boolean` | `undefined` |
-| `thetitle` | `thetitle` |             | `string`  | `undefined` |
-| `twiticon` | `twiticon` |             | `string`  | `undefined` |
-| `width`    | `width`    |             | `string`  | `undefined` |
+| Property   | Attribute   | Description | Type      | Default     |
+| ---------- | ----------- | ----------- | --------- | ----------- |
+| `fbIcon`   | `fb-icon`   |             | `string`  | `undefined` |
+| `homeIcon` | `home-icon` |             | `string`  | `undefined` |
+| `homeUrl`  | `home-url`  |             | `string`  | `undefined` |
+| `label`    | `label`     |             | `string`  | `undefined` |
+| `open`     | `open`      |             | `boolean` | `undefined` |
+| `thetitle` | `thetitle`  |             | `string`  | `undefined` |
+| `twitIcon` | `twit-icon` |             | `string`  | `undefined` |
+| `width`    | `width`     |             | `string`  | `undefined` |
 
 
 ## Events
