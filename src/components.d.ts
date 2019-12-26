@@ -10,6 +10,11 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface InteraktifHomeHeader {
+    'homeIcon': string;
+    'homeUrl': string;
+    'theTitle': string;
+  }
   interface MyHeader {
     'fbIcon': string;
     'homeIcon': string;
@@ -22,17 +27,29 @@ export namespace Components {
 declare global {
 
 
+  interface HTMLInteraktifHomeHeaderElement extends Components.InteraktifHomeHeader, HTMLStencilElement {}
+  var HTMLInteraktifHomeHeaderElement: {
+    prototype: HTMLInteraktifHomeHeaderElement;
+    new (): HTMLInteraktifHomeHeaderElement;
+  };
+
   interface HTMLMyHeaderElement extends Components.MyHeader, HTMLStencilElement {}
   var HTMLMyHeaderElement: {
     prototype: HTMLMyHeaderElement;
     new (): HTMLMyHeaderElement;
   };
   interface HTMLElementTagNameMap {
+    'interaktif-home-header': HTMLInteraktifHomeHeaderElement;
     'my-header': HTMLMyHeaderElement;
   }
 }
 
 declare namespace LocalJSX {
+  interface InteraktifHomeHeader {
+    'homeIcon'?: string;
+    'homeUrl'?: string;
+    'theTitle'?: string;
+  }
   interface MyHeader {
     'fbIcon'?: string;
     'homeIcon'?: string;
@@ -42,6 +59,7 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
+    'interaktif-home-header': InteraktifHomeHeader;
     'my-header': MyHeader;
   }
 }
@@ -52,6 +70,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'interaktif-home-header': LocalJSX.InteraktifHomeHeader & JSXBase.HTMLAttributes<HTMLInteraktifHomeHeaderElement>;
       'my-header': LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
     }
   }
