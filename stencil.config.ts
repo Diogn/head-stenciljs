@@ -31,8 +31,11 @@ export const config: Config = {
         }),
         tailwindcss('./tailwind.config.js'),
         purgecss({
-          content: ['./src/components/**/*.ts'],
-          css: ['./src/global/style.css']
+          content: [
+              './src/index.html', 
+              './src/components/**/*.tsx'
+        ],
+          defaultExtractor: content => content.match(/[A-Za-z0-9-_:]+/g) || []
         })
       ]
     })
