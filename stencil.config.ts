@@ -1,5 +1,9 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
+import { postcss } from '@stencil/postcss';
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
+import purgecss from '@fullhuman/postcss-purgecss';
 
 export const config: Config = {
   namespace: 'my-header',
@@ -16,7 +20,21 @@ export const config: Config = {
       serviceWorker: null // disable service workers
     }
   ],
+  globalStyle: 'src/global/style.css',
   plugins: [
-    sass()
+    sass(),
+    postcss({
+      plugins: [
+        autoprefixer({
+          browsers: ['last 6 versions'],
+          cascade: false
+        }),
+        tailwindcss('./tailwind.config.js'),
+        purgecss({
+          content: ['./src/components/**/*.ts'],
+          css: ['./src/global/style.css']
+        })
+      ]
+    })
   ]
 };

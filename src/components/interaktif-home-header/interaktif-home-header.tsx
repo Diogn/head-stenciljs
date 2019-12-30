@@ -3,7 +3,7 @@ import { Component, Prop, h } from '@stencil/core';
 
 @Component({
     tag: 'interaktif-home-header',
-    styleUrl: 'interaktif-home-header.scss'
+    styleUrl: '../../global/style.css'
 })
 export class InteraktifHomeHeader {
 

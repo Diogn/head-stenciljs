@@ -15,6 +15,7 @@
     "loader/"
   ],
   "scripts": {
+    "post": "tailwind build src/global/style.css -o src/global/build/tailwind.css",
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
@@ -22,9 +23,15 @@
     "generate": "stencil generate"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.3.0",
     "@stencil/core": "^1.3.3",
-    "@stencil/sass": "^1.1.1"
+    "@stencil/postcss": "^1.0.1",
+    "@stencil/sass": "^1.1.1",
+    "@types/autoprefixer": "^9.6.1",
+    "autoprefixer": "^9.7.3"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "tailwindcss": "^1.1.4"
+  }
 }
