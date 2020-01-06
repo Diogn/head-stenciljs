@@ -15,6 +15,15 @@ export namespace Components {
     'homeUrl': string;
     'theTitle': string;
   }
+  interface KompasHeader {
+    'findIcon': string;
+    'homeIcon': string;
+    'homeUrl': string;
+    'loginIcon': string;
+    'memberIcon': string;
+    'rubricIcon': string;
+    'storeIcon': string;
+  }
   interface MyHeader {
     'fbIcon': string;
     'homeIcon': string;
@@ -33,6 +42,12 @@ declare global {
     new (): HTMLInteraktifHomeHeaderElement;
   };
 
+  interface HTMLKompasHeaderElement extends Components.KompasHeader, HTMLStencilElement {}
+  var HTMLKompasHeaderElement: {
+    prototype: HTMLKompasHeaderElement;
+    new (): HTMLKompasHeaderElement;
+  };
+
   interface HTMLMyHeaderElement extends Components.MyHeader, HTMLStencilElement {}
   var HTMLMyHeaderElement: {
     prototype: HTMLMyHeaderElement;
@@ -40,6 +55,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'interaktif-home-header': HTMLInteraktifHomeHeaderElement;
+    'kompas-header': HTMLKompasHeaderElement;
     'my-header': HTMLMyHeaderElement;
   }
 }
@@ -49,6 +65,15 @@ declare namespace LocalJSX {
     'homeIcon'?: string;
     'homeUrl'?: string;
     'theTitle'?: string;
+  }
+  interface KompasHeader {
+    'findIcon'?: string;
+    'homeIcon'?: string;
+    'homeUrl'?: string;
+    'loginIcon'?: string;
+    'memberIcon'?: string;
+    'rubricIcon'?: string;
+    'storeIcon'?: string;
   }
   interface MyHeader {
     'fbIcon'?: string;
@@ -60,6 +85,7 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'interaktif-home-header': InteraktifHomeHeader;
+    'kompas-header': KompasHeader;
     'my-header': MyHeader;
   }
 }
@@ -71,6 +97,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'interaktif-home-header': LocalJSX.InteraktifHomeHeader & JSXBase.HTMLAttributes<HTMLInteraktifHomeHeaderElement>;
+      'kompas-header': LocalJSX.KompasHeader & JSXBase.HTMLAttributes<HTMLKompasHeaderElement>;
       'my-header': LocalJSX.MyHeader & JSXBase.HTMLAttributes<HTMLMyHeaderElement>;
     }
   }
