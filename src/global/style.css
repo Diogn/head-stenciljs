@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* extend tailwind styling */
+
+.bg-blue-royal-700 {
+  background-color: #00599a;
+}
