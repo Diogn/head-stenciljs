@@ -7,7 +7,9 @@
 
 
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
-
+import {
+  MenuItems,
+} from './components/kompas-header/model/menu-item.model';
 
 export namespace Components {
   interface InteraktifHomeHeader {
@@ -21,6 +23,8 @@ export namespace Components {
     'homeUrl': string;
     'loginIcon': string;
     'memberIcon': string;
+    'menuItems': MenuItems[];
+    'openMenuIcon': any;
     'rubricIcon': string;
     'storeIcon': string;
   }
@@ -72,6 +76,8 @@ declare namespace LocalJSX {
     'homeUrl'?: string;
     'loginIcon'?: string;
     'memberIcon'?: string;
+    'menuItems'?: MenuItems[];
+    'openMenuIcon'?: any;
     'rubricIcon'?: string;
     'storeIcon'?: string;
   }

@@ -7,3 +7,11 @@
 .bg-blue-royal-700 {
   background-color: #00599a;
 }
+
+.max-w-xl {
+  max-width: 60rem;
+}
+
+.font-pt-sans {
+  font-family: PT Sans, Arial, Verdana, Helvetica, sans-serif;
+}
